@@ -32,9 +32,13 @@
 		  echo "<input type='checkbox' name ='".$i."' value='".$i."'>";
 			//echo "<input type='checkbox' name ='".$i."' value='supprimer'>"; before
 			echo "<a href='#alert' class='span3' tabindex='0'>";
+
+
+
 			echo $toutesLesTaches[$i][0];
+
+			
 			echo "</a>";
-			echo "<a href='#' class='span2' tabindex='0'> hide list</a>";
 			echo "<ul  id='alert' class='alert'>";
 			echo "<li>".$toutesLesTaches[$i][1]."</li>";
 			echo "<li>".$toutesLesTaches[$i][2]."</li>";
@@ -108,3 +112,4 @@
 	</form>
 </body>
 </html>
+

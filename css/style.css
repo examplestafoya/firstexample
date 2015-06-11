@@ -32,3 +32,33 @@ ul li ul {
 ul li:hover ul {
     display: block;
 }
+
+/*
+git add --all
+git status // to see which elements of the directory are in the gitgit pus
+git commit -m "premier commit"
+git push -u origin master is the same as
+git push 
+chez moi 
+I need to create the archive at home first in this example is 
+mkdir todolist-maison
+then git clone https... with the full address to be found in the site of github
+we can copy it to the clipboard
+
+wap57@wap57-desktop ~ $ git clone https://github.com/examplestafoya/firstexample.git
+Clonage dans 'firstexample'...
+remote: Counting objects: 12, done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 12 (delta 0), reused 12 (delta 0), pack-reused 0
+Unpacking objects: 100% (12/12), done.
+Vérification de la connectivité... fait.
+wap57@wap57-desktop ~ $ ^C
+wap57@wap57-desktop ~ $ 
+ls
+
+
+
+
+*/
+
+
