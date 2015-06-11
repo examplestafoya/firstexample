@@ -33,6 +33,7 @@ ul li:hover ul {
     display: block;
 }
 
+<<<<<<< HEAD
 /*
 git add --all
 git status // to see which elements of the directory are in the gitgit pus
@@ -62,3 +63,15 @@ ls
 */
 
 
+=======
+/* 
+git clone ______
+git add .
+git commit -m "commentaire dans index"
+git push origin master
+
+then it's going to ask for the user name on github.com
+and the password
+
+ 
+>>>>>>> d15b3d1d3033fb879e681fadb4160febe40d7204
