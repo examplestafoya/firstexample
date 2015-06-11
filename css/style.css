@@ -1,0 +1,34 @@
+.new{
+	color: red;
+}
+
+.urgent{
+	color:red;
+}
+
+.normal{
+	color:black;
+}
+
+.basse{
+	color:green;
+}
+
+ul li ul{
+	display:none;
+}
+
+a{ 
+   
+}
+
+
+
+
+ul li ul {
+    display: none;
+}
+
+ul li:hover ul {
+    display: block;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Document</title>
+</head>
+<body>
+	<h1> Ma super TO-DO list </h1>
+	<?php
+		if (array_key_exists("success", $_GET))
+		{
+		 echo "<div class='new'> votre tache a bien ete ajoutée </div>";
+		} 
+	?>
+
+	<?php
+
+
+		echo "<form name='toutsupprier' method='GET' action='supprimertout.php'>";
+		echo "<button> TOUT SUPPRIMER </button>";
+		echo "</form>";
+		echo "<form name='supprimer' method='POST' action='supprimer.php'>";
+		echo "<ul>";
+		for ($i=0; $i < count($toutesLesTaches); $i++){
+			//if ($toutesLesTaches[$i][3]='urgent'){
+			//	echo "class='urgent'"
+			//}
+						echo "<li>";
+
+			//echo '<label>';
+		  echo "<input type='checkbox' name ='".$i."' value='".$i."'>";
+			//echo "<input type='checkbox' name ='".$i."' value='supprimer'>"; before
+			echo "<a href='#alert' class='span3' tabindex='0'>";
+			echo $toutesLesTaches[$i][0];
+			echo "</a>";
+			echo "<a href='#' class='span2' tabindex='0'> hide list</a>";
+			echo "<ul  id='alert' class='alert'>";
+			echo "<li>".$toutesLesTaches[$i][1]."</li>";
+			echo "<li>".$toutesLesTaches[$i][2]."</li>";
+			if ($toutesLesTaches[$i][3]=='urgent')
+			{
+				echo "<li class='urgent'>".$toutesLesTaches[$i][3]." </li>";
+			}
+			elseif ($toutesLesTaches[$i][3]=='normal')
+			{
+				echo "<li class='normal'>".$toutesLesTaches[$i][3]." </li>";	
+			}
+			elseif ($toutesLesTaches[$i][3]=='basse')
+			{
+				echo "<li class='basse'> ".$toutesLesTaches[$i][3]."</li>";	
+			}
+			echo "</ul>";
+			//echo '</label>';
+			echo '<br>';
+						echo "</li>";
+
+
+		}
+		echo "</ul>";
+		echo nl2br("\n"); 
+		//echo "<button> supprimer tout </button>";
+		echo "<button> supprimer les taches selectionées </button>";	
+
+
+		echo "</form>";
+	?>
+	<form method="POST" action="ajout.php">
+		<input type="text" name="titre" placeholder="Titre de la tache"> 
+		<br>
+		<input type="text" name="description" placeholder="Entrez la description de votre tache" size="200"><br>
+
+		<select name="jour">
+			<?php for($i=1;$i<=31;$i++):?>
+				<option value ="<?php echo $i; ?>" > <?php echo $i; ?> </option>
+			<?php endfor; ?>
+		</select>
+		<select name="mois">
+				<option value="1"> Janvier </option>
+				<option value="2"> Fevrier </option>
+				<option value="3"> Mars </option>
+				<option value="4"> Avril </option>
+				<option value="5"> Mai </option>
+				<option value="6"> Juin </option>
+				<option value="7"> Julliet </option>
+				<option value="8"> Aout </option>
+				<option value="9"> Septembre </option>
+				<option value="10"> Octobre </option>
+				<option value="11"> Novembre </option>
+				<option value="12"> Decembre </option>
+		</select>
+		<br>
+
+		<select name="annee">
+			<?php for($i=date("Y");$i<=date("Y")+10;$i++) : ?>
+				<option value ="<?php echo $i; ?>" > <?php echo $i; ?> </option>
+			<?php endfor; ?>
+		</select>
+		
+
+		<select name="priorite"><br>
+			<option value="urgent"> urgent </option>
+			<option value="normal"> normal </option>
+			<option value="basse"> basse </option>
+		</select><br>
+		<button> valider </button>
+
+	</form>
+</body>
+</html>
