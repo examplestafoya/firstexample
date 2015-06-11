@@ -32,3 +32,14 @@ ul li ul {
 ul li:hover ul {
     display: block;
 }
+
+/* 
+git clone ______
+git add .
+git commit -m "commentaire dans index"
+git push origin master
+
+then it's going to ask for the user name on github.com
+and the password
+
+ 
